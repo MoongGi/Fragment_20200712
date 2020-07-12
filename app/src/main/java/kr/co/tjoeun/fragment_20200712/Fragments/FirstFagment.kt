@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_first.*
 import kr.co.tjoeun.fragment_20200712.R
 
 class FirstFagment : Fragment()
@@ -16,5 +17,13 @@ class FirstFagment : Fragment()
     ): View? {
 
         return inflater.inflate(R.layout.fragment_first, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        changeInfoBtn.setOnClickListener {
+            infoTxt.text = "졸려"
+        }
     }
 }
